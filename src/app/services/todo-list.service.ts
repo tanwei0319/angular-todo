@@ -42,12 +42,6 @@ export class TodoListService {
     this.saveList();
   }
 
-  completeItem(item: TodoItem, changes) {
-    const index = this.todoList.indexOf(item);
-    this.todoList[index] = { ...item, ...changes };
-    this.saveList();
-  }
-
   removeItem(item: TodoItem) {
     const index = this.todoList.indexOf(item);
     this.todoList.splice(index, 1);
